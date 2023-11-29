@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bienvenido a DuocUC
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <div class="inicio-container" >
+      <ion-img src="assets/icon/Logo_DuocUC.png" alt="Logo de DuocUC" class="logo"></ion-img>
+      <h1>Bienvenido a DuocUC</h1>
+      <p>Registra tu asistencia escaneando códigos QR.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="clima-container">
+      <div *ngIf="weatherTemp">
+        <div id="divWeatherMain"> 
+          <div *ngIf="weatherTemp.isDay" class="weatherWidgetRow">
+              <i class="fas fa-3x fa-sun sun"></i>  
+          </div>   
+          <div *ngIf="!weatherTemp.isDay" class="weatherWidgetRow">
+              <i class="fas fa-3x fa-moon moon"></i>  
+          </div>   
+          <div class="weatherWidgetRow cloudDiv">
+              <i class="fas fa-cloud fa-3x cloud"></i>
+          </div>
+          <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{weatherTemp.temp_celcius}}°</div>
+          <div class="weatherWidgetRow" style="font-size: 12px;">{{weatherTemp.temp_min}}° / {{weatherTemp.temp_max}}°</div>
+          <div class="weatherWidgetRow" style="font-size: 12px;">Humedad: {{weatherTemp.main.humidity}}%</div>
+          <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{weatherTemp.name}}</div>
+          <div class="weatherWidgetRow" id="day" style="font-size: 12px;">{{ fechaActual }}</div>
+        </div>
+      </div>
+      <div *ngIf="!weatherTemp">
+        <p>Cargando datos del clima...</p>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+</ion-content>
+

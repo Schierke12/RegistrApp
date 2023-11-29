@@ -1,0 +1,39 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>Mi cuenta</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content fullscreen="true" slot="fixed">
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img src="assets/icon/456212.png" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="user-meta ion-text-center">
+      <h3 class="nombre">Nombre usuario</h3>
+      <h5 class="carrera">Nombre carrera</h5>
+    </div>
+
+    <ion-button class="cerrar" expand="full" color="danger" (click)="iralogin()">CERRAR SESION</ion-button>
+    
+  
+    <ion-button class="cerrar" expand="full" color="primary" (click)="iramapa()">Ver mapa</ion-button>
+
+
+    <ion-button (click)="compartirApp()"  class="cerrar">
+      <ion-icon slot="start" ios="share-social" md="share-social"></ion-icon>
+    </ion-button>
+
+  </div>
+
+  
+
+</ion-content>

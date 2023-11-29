@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>  login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <form class="login" [formGroup]="formularioLogin">
+      <ion-item class="login__field">
+        <ion-label position="floating">User name / Email</ion-label>
+        <ion-input formControlName="user" type="text" class="login__input"></ion-input>
+      </ion-item>
+      <ion-item class="login__field">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="password" type="password" class="login__input"></ion-input>
+      </ion-item>
+      <a class="button2" href="/tabs/recuperar"> recuperar contraseña</a>
+      <ion-item class="button">
+        <button class="login__submit" type="submit">
+          <span class="button__text" (click)="ingreso()">Login</span>
+          <i class="button__icon fas fa-chevron-right"></i>
+        </button>
+      </ion-item>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/tabs/registro']">REGISTRO</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

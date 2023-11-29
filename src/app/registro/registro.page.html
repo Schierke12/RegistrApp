@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-back-button icon = "arrow-back" defaultHref="/"> volver </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <form class="login" [formGroup]="formularioR">
+      <ion-item class="login__field">
+        <ion-label position="floating">User name / Email</ion-label>
+        <ion-input formControlName="user" type="text" class="login__input"></ion-input>
+      </ion-item>
+      <ion-item class="login__field">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="password" type="password" class="login__input"></ion-input>
+      </ion-item>
+      <ion-item class="login__field">
+        <ion-label position="floating">Password again</ion-label>
+        <ion-input formControlName="password_again" type="password" class="login__input"></ion-input>
+      </ion-item>
+      <ion-item class="button">
+        <button class="login__submit" type="submit">
+          <span class="button__text" (click)="registrar()">Login</span>
+          <i class="button__icon fas fa-chevron-right"></i>
+        </button>
+      </ion-item>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Escaner QR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="lectura; else sinLectura">
+    <p>Presente!</p>
+    <p>Su asistencia ha quedado registrada</p>
+    <p>Buena suerte el dia de hoy!</p>
+  </div>
+  <ng-template #sinLectura class="presente"> 
+    <p class="presente">No presente..</p>
+    <p class="presente">Espere a que su docente despliegue el Codigo QR y presione en el boton azul</p>
+    <img class="img-qr" src="assets/icon/scan-qr-code.png" alt="">
+  </ng-template>
+</ion-content>
+
+<ion-content [fullscreen]="true" (click)="startScan()">
+  <ion-fab slot="fixed" class="capture-button">
+    <ion-fab-button>
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+
+ 

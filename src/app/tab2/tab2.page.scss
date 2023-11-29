@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
+
+ion-content {
+    background: linear-gradient(90deg, #c7c5f4, #776bcc);
+    overflow-y: hidden !important;
+}
+
+.centro {
+    display: grid;
+    place-items: center;
+    padding-top: 100px;
+}
+
+.camera-container {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.capture-button {
+    width: 60px;
+    height: 60px;
+    background-color: #f00;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.intrucciones {
+    text-align: center;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.texto {
+    margin-bottom: 10px;
+}
+
+.icono-camera {
+    display: block;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.evidence-card {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    box-shadow: 2 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.slide-in {
+    animation: slide-in-animation 0.5s ease-in-out both;
+}
+
+@keyframes slide-in-animation {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+body.scanner-active {
+    --background: transparent;
+    --ion-background-color: transparent;
+  }
+
+.presente{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img-qr{
+    display: flex;
+    
+    // height: 90%;
+    // width: 90%;
+}

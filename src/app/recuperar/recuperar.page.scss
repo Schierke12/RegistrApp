@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+}
+
+ion-content {
+	background: linear-gradient(90deg, #c7c5f4, #776bcc);
+	overflow-y: hidden !important;
+}
+
+.container {
+	display: grid;
+	place-items: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.login {
+	width: 320px;
+	padding-top: 156px;
+}
+
+.login__field {
+	padding: 20px 0px;
+	position: relative;
+}
+
+
+.login__input {
+	border: none;
+	background: none;
+	padding: 10px;
+	font-weight: 700;
+	width: 75%;
+	transition: 0.2s;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px;
+	border-radius: 26px;
+	border: 1px solid #d4d3e8;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 35%;
+	color: #4c489d;
+	transition: 0.2s;
+}
+
+.button2 {
+	padding-left: 15px;
+	text-decoration: none;
+}
+
+.slide-in {
+	animation: slide-in-animation 0.5s ease-in-out both;
+}
+
+@keyframes slide-in-animation {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
